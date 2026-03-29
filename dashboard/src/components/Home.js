@@ -1,15 +1,15 @@
-import React from 'react';
-import DoughnutChart from './DoughnutChart';
-import VerticalGraph from './VerticalGraph';
+import React from "react";
 
-function Home() {
+import Dashboard from "./Dashboard";
+import TopBar from "./TopBar";
+
+const Home = () => {
   return (
-    <div className="home">
-      <h2>Dashboard Home</h2>
-      <DoughnutChart />
-      <VerticalGraph />
-    </div>
+    <>
+      <TopBar />
+      <Dashboard />
+    </>
   );
-}
+};
 
 export default Home;
