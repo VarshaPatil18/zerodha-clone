@@ -10,7 +10,13 @@ const BuyActionWindow = ({ uid }) => {
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleBuyClick = () => {
-    // Order placed (mock)
+    axios.post("http://localhost:3002/newOrder", {
+      name: uid,
+      qty: stockQuantity,
+      price: stockPrice,
+      mode: "BUY",
+    });
+  
     console.log("Order placed:", {
       name: uid,
       qty: stockQuantity,
